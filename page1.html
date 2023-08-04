@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>функции</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230804214112" type="text/css">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<nav class="header__linkbox">
+					<ul>
+						<li class="header__link"><a href="page1.html">функции</a></li>
+						<li class="header__link"><a href="page2.html">списки</a></li>
+						<li class="header__link"><a href="page3.html">обьектная модель документа</a></li>
+						<li class="header__link"><a href="page4.html">координаты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<div class="page__titlebox">
+					<h1 class="page__title">функции</h1>
+				</div>
+				<article class="page__article article">
+					<h2 class="article__title">примеры и задания</h2>
+					<div class="article__block">
+						<ul class="article__item">
+							<li class="article__task">какой результат первее попадет в консоль</li>
+							<li class="article__cod">function showName() &#123;<br>
+								console.log('vasya'); <br> &#125;</li>
+							<li class="article__task">или</li>
+							<li class="article__cod">setTimeout(showName, 0); &#123;<br>
+								console.log('kolya'); <br> &#125;</li>
+							<li class="article__resolt">Сначала был вывод vasya, a потом kolya</li>
+							<li class="article__text">так происходит потому, что функции с обьявленной задержкой
+								обрабатывает медленнее чем без нее, в нашем случае цыфра 0 -это обьявление задержки</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">верно ли задана функция</li>
+							<li class="article__cod">showMessage() <br>
+								let showMessage = function() &#123; <br>
+								console.log('this is message'); <br>
+								&#125;</li>
+							<li class="article__resolt">код не правельный , правельно будет:</li>
+							<li class="article__cod">
+								let showMessage = function() &#123; <br>
+								console.log('this is message'); <br>
+								&#125; <br>
+								showMessage() </li>
+							<li class="article__text">в данном примере обьявление функции происходит в переменной ,
+								а до обьявления переменной ее не существует
+							</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">верно ли задана функция</li>
+							<li class="article__cod">showMessage() <br>
+								function showMessage() &#123; <br>
+								console.log('message')&#125;</li>
+							<li class="article__resolt">вывод message</li>
+							<li class="article__text">не играет роли где расположен вызов функции ,если уровень
+								вложености совпадает и функция обьявлена</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">как решить проблему</li>
+							<li class="article__cod">if (2>1) &#123; <br>
+								function showMessage() &#123; <br>
+								console.log('hello'); <br>
+								&#125; <br>
+								&#125; <br>
+								showMessage()</li>
+							<li class="article__text">ошибка возникает потому, что функция обьявлена только при
+								соблюдении условия тоесть на втором уровне вложености, а вызывается на первом.
+								проблему можно решить двумя способами</li>
+							<li class="article__task">первое решение</li>
+							<li class="article__cod">if (2>1) &#123; <br>
+								function showMessage() &#123; <br>
+								console.log('hello'); <br>
+								&#125; <br>
+								showMessage() <br>
+								&#125;
+							</li>
+							<li class="article__task">второе решение</li>
+							<li class="article__cod">
+								function showMessage() &#123; <br>
+								if (2>1) &#123; <br>
+								console.log('hello'); <br>
+								&#125; <br>
+								&#125; <br>
+								showMessage()</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20230804214112"></script>
+</body>
+
+</html>

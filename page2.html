@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>списки</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230804214112" type="text/css">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<nav class="header__linkbox">
+					<ul>
+						<li class="header__link"><a href="page1.html">функции</a></li>
+						<li class="header__link"><a href="page2.html">списки</a></li>
+						<li class="header__link"><a href="page3.html">обьектная модель документа</a></li>
+						<li class="header__link"><a href="page4.html">координаты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<div class="page__titlebox">
+					<h1 class="page__title">списки</h1>
+				</div>
+				<article class="page__article article">
+					<h2 class="article__title">примеры и задания</h2>
+					<div class="article__block">
+						<ul class="article__item">
+							<li class="article__task">каким будет результат</li>
+							<li class="article__cod">let arr = ['vanya', 'ishtvan', 'olya'];<br>
+								let newArr = arr;<br>
+								newArr.push('petya');<br>
+								console.log(arr.length);</li>
+							<li class="article__resolt">ответ 4</li>
+							<li class="article__text">значение начального массива изменилось, потому-что , массивы
+								являются обьектами и при присвоении задается ссылка на содержимое </li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">создать массив users с элементами vanya и ishtvan <br> добавить
+								olya в конец <br> заменить значение ishtvan на petya <br> использовать код поиска для
+								массива любой длины <br> вставить masha и pasha в начало</li>
+							<li class="article__task">решение</li>
+							<li class="article__cod">
+								let users = ['vanya', 'ishtvan'];<br>
+								console.log(users);<br>
+								users.push('olya');<br>
+								console.log(users);<br>
+								let index;<br>
+								if (users.includes('ishtvan')) &#123;<br>
+								index = users.indexOf('ishtvan');<br>
+								users[index] = 'petya';<br>
+								&#125;<br>
+								console.log(users); <br>
+								users.unshift('masha', 'pasha'); <br>
+								console.log(users);
+
+							</li>
+							<li class="article__resolt">['vanya','ishtvan'] <br>
+								['vanya','ishtvan','olya'] <br>
+								['vanya','petya','olya'] <br>
+								['masha','pasha''vanya','petya','olya']</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">удалить из масива ['vanya','ishtvan','olya'] обьект ishtvan и
+								вернуть его в переменную</li>
+							<li class="article__task">решение</li>
+							<li class="article__cod">
+								let arr2 = ['vanya', 'ishtvan', 'olya']; <br>
+								let index2; <br>
+								let elem; <br>
+								console.log(arr2); <br>
+								index2 = (arr2.includes('ishtvan')) ? arr2.indexOf('ishtvan') : "нет такого элемента";
+								<br>
+								if (typeof (index2) == "number") &#123; <br>
+								elem = arr2[index2]; <br>
+								arr2.splice(index2, 1);<br>
+								&#125; else &#123;<br>
+								console.log(index2) <br>
+								&#125; <br>
+								elem.toString(); <br>
+								console.log(elem); <br>
+								console.log(arr2)
+							</li>
+							<li class="article__resolt"> ishtvan <br> ['vanya','olya'];
+							</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">превратить строку в массив 'vanya,ishtvan,olya'</li>
+							<li class="article__task">решение</li>
+							<li class="article__cod">
+								let str = 'vanya,ishtvan,olya'; <br>
+								let arr3 = str.split(',');<br>
+								console.log(arr3);</li>
+							<li class="article__resolt"> ['vanya','ishtvan','olya']</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">чему равен previosValue в начале работы метода</li>
+							<li class="article__cod">let arrOne = [9, 2, 8];
+								let reduseValue = arrOne.reduce(function (previosValue, item, index, arrey) &#123; <br>
+								console.log(previosValue); <br>
+								&#125;);</li>
+							<li class="article__resolt"> ответ 9</li>
+							<li class="article__text">нулевое значение не задано , по этому первый элемент становится
+								нулевым значением</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20230804214112"></script>
+</body>
+
+</html>

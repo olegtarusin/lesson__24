@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>координаты</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230804214112" type="text/css">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<nav class="header__linkbox">
+					<ul>
+						<li class="header__link"><a href="page1.html">функции</a></li>
+						<li class="header__link"><a href="page2.html">списки</a></li>
+						<li class="header__link"><a href="page3.html">обьектная модель документа</a></li>
+						<li class="header__link"><a href="page4.html">координаты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<div class="page__titlebox">
+					<h1 class="page__title">координаты</h1>
+				</div>
+				<article class="page__article article">
+					<h2 class="article__title">примеры и задания</h2>
+					<div class="article__block">
+						<ul class="article__item">
+							<li class="article__task">узнать ширину полосы прокрутки</li>
+							<li class="article__task">решение</li>
+							<li class="article__cod">
+								let widthPlusScroll, width;<br>
+								widthPlusScroll = window.innerWidth;<br>
+								width = document.documentElement;<br>
+								width = widthPlusScroll - width.clientWidth;<br>
+								console.log(width, widthPlusScroll);
+							</li>
+							<li class="article__resolt">ответ</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">заставить браузер прокрутится на 100 пикселей через секунду после
+								открытия страницы</li>
+							<li class="article__task">решение</li>
+							<li class="article__cod">
+								function scrollMe() &#123; <br>
+								window.scrollTo(&#123; <br>
+								top: 100,<br>
+								left: 0,<br>
+								behavior: "smooth"<br>
+								&#125;);<br>
+								console.log(window.pageYOffset, 'нажмите f5 чтоб узнать результат');<br>
+								&#125;<br>
+								setTimeout(scrollMe, 1000);
+							</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">получить координаты трех любых элеементов на странице</li>
+							<li class="article__task">решение</li>
+							<li class="article__cod">
+								console.log(article. getBoundingClientRect() .top, '-координаты article OY'); <br>
+								console.log(tagResolt. getBoundingClientRect() .top, '-координаты результата первого
+								примера OY');<br>
+								console.log(testBox. getBoundingClientRect() .top, '-координаты тестового блока OY');
+							</li>
+							<li class="article__resolt">
+								ответ <br>
+							</li>
+						</ul>
+					</div>
+				</article>
+				<div class="page__test test">
+					<p class="test__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis minima
+						ipsum nemo reprehenderit? Quos doloribus impedit ipsa commodi qui vitae suscipit. Fuga odio
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione enim alias laudantium voluptas
+						quo vero doloribus quaerat. Cumque culpa itaque ratione eius atque vitae odio dolores
+						consequuntur molestias impedit. Tempore.
+						Sint, nisi facere ullam repudiandae eaque nam, molestiae quidem unde, dolorum maiores nesciunt
+						impedit similique aspernatur! Excepturi voluptate nihil delectus possimus consequatur
+						repellendus! Nihil impedit enim exercitationem iusto dicta provident.
+						Perspiciatis aut aliquam dolores aperiam accusamus at distinctio ipsum laborum, dolor illo ullam
+						impedit numquam consequatur, amet magni itaque laudantium nihil dolorum dicta voluptas rerum.
+						Natus molestiae quo tempora officiis.
+						Repellat atque accusantium dolor corporis sapiente dicta perspiciatis, quos, veritatis incidunt
+						quisquam dolorem nesciunt hic aspernatur voluptatem doloribus cum? Exercitationem vero, veniam
+						ipsa recusandae quisquam dolorem quis sit ipsum excepturi?
+						Eius, qui nostrum cum sed fuga in quaerat temporibus consectetur id! Eos ad tempora quia labore.
+						Beatae nam sint consequuntur, voluptatem odit deserunt, non cum asperiores soluta ullam minus
+						eos! <span class="test__span">i am span</span>
+						Tempore ea unde fugit molestiae inventore aspernatur saepe, repellendus esse amet quas
+						quibusdam? Odit id, voluptatibus nihil, sit repudiandae, quos labore illo officiis quae maxime
+						asperiores rerum nam nesciunt a!
+						Autem, iusto quas corrupti in qui ea atque consequatur perferendis reprehenderit numquam illum
+						vero mollitia architecto, doloribus magni culpa cumque! Aliquid assumenda eum ratione ipsa ea
+						commodi doloribus dolores quidem.
+						Quo veritatis dolores, vel accusamus iure numquam sit ipsum dolorum et. Ullam ab totam
+						architecto sapiente saepe nihil animi laborum eum? Optio repellat error ad commodi blanditiis
+						tenetur mollitia omnis.
+						Quibusdam corrupti maiores dignissimos voluptate ducimus perferendis illum labore, quia eveniet
+						optio maxime quis, sunt sed dolor eligendi nemo deleniti accusantium vero dolores cupiditate?
+						Eum ullam dicta nobis necessitatibus ex.
+
+					</p>
+
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20230804214112"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>ДОМ</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230804214112" type="text/css">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<nav class="header__linkbox">
+					<ul>
+						<li class="header__link"><a href="page1.html">функции</a></li>
+						<li class="header__link"><a href="page2.html">списки</a></li>
+						<li class="header__link"><a href="page3.html">обьектная модель документа</a></li>
+						<li class="header__link"><a href="page4.html">координаты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<div class="page__titlebox">
+					<h1 class="page__title">обьектная модель документа</h1>
+				</div>
+				<article class="page__article article">
+					<h2 class="article__title">примеры и задания</h2>
+					<div class="article__block">
+						<ul class="article__item">
+							<li class="article__task">получить в переменную элемент с атребутом data-say-hi и вывести
+								значение этого атребута</li>
+							<li class="article__cod">&lt;div data-say-hi="yes"&gt;привет&lt;/div&gt;</li>
+							<li class="article__task">решение</li>
+							<li class="article__cod"> const data = document.querySelector('[data-say-hi]');<br>
+								let dataContent = data.innerHTML;<br>
+								console.log(dataContent);</li>
+							<li class="article__resolt">вывод будет 'привет'</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">получить в переменную элемент с текстом йончи</li>
+							<li class="article__cod">&lt;ul&gt; <br>
+								&lt;li&gt;Корчи &lt;/li&gt; <br>
+								&lt;li&gt;Иончи &lt;/li&gt;<br>&lt;/ul&gt;</li>
+							<li class="article__task">решение</li>
+							<li class="article__cod">
+								let data2 = document.querySelector ('ul.homework__exemple'); <br>
+								data2 = data2.lastElementChild; <br>
+								data2 = data2.innerHTML; <br>
+								console.log(data2);
+							</li>
+							<li class="article__resolt">вывод Иончи</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">получить в перемеенную коллекцию с классом like</li>
+							<li class="article__cod">
+								&lt;div class="like"&gt;&lt;/div&gt; <br>
+								&lt;div class="subscribe"&gt;&lt;/div&gt; <br>
+								&lt;div class="like subscribe"&gt;&lt;/div&gt;
+							</li>
+							<li class="article__task">решение</li>
+							<li class="article__cod"> let data3 = document. querySelectorAll('.like');<br>
+								for (let data3Elem of data3) &#123; <br>
+								console.log(data3Elem);<br>
+								&#125;</li>
+							<li class="article__resolt">получаем элементы колекции
+								&lt;div class="homework__exemple like"&gt;text&lt;/div&gt;
+								&lt;div class="homework__exemple like subscribe"&gt;text&lt;/div&gt;
+							</li>
+						</ul>
+						<ul class="article__item">
+							<li class="article__task">куда добавится елемент &lt;li&gt;текст &lt;/li&gt;</li>
+							<li class="article__cod">const list = document.querySelectorAll('ul'); <br>
+								list.insertAdjacentHTML(<br>
+								`beforeend`,<br>
+								`&lt;li&gt;текст&lt;/li&gt;`<br>
+								);</li>
+							<li class="article__task">HTML</li>
+							<li class="article__cod">&lt;ul&gt; <br>
+								&lt;li&gt;пункт1 &lt;/li&gt; <br>
+								&lt;li&gt;пункт2 &lt;/li&gt;<br>&lt;/ul&gt;
+							</li>
+							<li class="article__task">разберем пример на тегах второго задания</li>
+							<li class="article__cod">let data4 = document.querySelector ('ul.homework__exemple');<br>
+								data4.insertAdjacentHTML(<br>
+								"beforeend",<br>
+								'&lt;li&gt;текст beforeend&lt;/li&gt;'<br>
+								);</li>
+							<li class="article__resolt">текст попадет внутрь тега после последнего элемента</li>
+						</ul>
+					</div>
+				</article>
+				<div class="page__homework homework">
+					<h2 class="homework__title">теги для домашки</h2>
+					<div class="homework__exemple" data-say-hi="yes">привет</div>
+					<ul class="homework__exemple">
+						<li>Корчи</li>
+						<li>Йончи</li>
+					</ul>
+					<div class="homework__exemple like">text like</div>
+					<div class="homework__exemple subscribe">text like</div>
+					<div class="homework__exemple like subscribe">text like</div>
+				</div>
+				<div class="page__test test">
+					<h3 class="test__head">heeaaddd</h3>
+					<ul class="test__ul">
+						<li class="test__li li--text">test-li li--text</li>
+						<li class="test__li">
+							<ul class="test__childlist">
+								<li class="test__children">test__children</li>
+								<li class="test__children">test__children</li>
+								<li class="test__children">test__children</li>
+								<!--тестовый блок-->
+							</ul>
+						</li>
+						<li class="test__li li--number">test-li li--number</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20230804214112"></script>
+</body>
+
+</html>
